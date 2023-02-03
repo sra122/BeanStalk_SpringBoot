@@ -1,1 +1,15 @@
-version
+version: 02
+
+phases:
+  build:
+    commands:
+      - echo Enter the building phase
+      - mvn clean package
+  post_build:
+    commands:
+      - echo Build completed
+
+artifacts:
+  files:
+    - target/test-beanstalk.jar
+  discard-paths: yes
